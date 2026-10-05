@@ -1,0 +1,8 @@
+/* PERFORMANCE: blur is the most expensive effect. Only the focused window and the shell panels blur; other windows get a flat translucent fill. */
+.win{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgb(var(--gl)/calc(var(--ga) + .22))}
+.win.focus{-webkit-backdrop-filter:blur(var(--blur));backdrop-filter:blur(var(--blur))}
+.dragging .win.focus{-webkit-backdrop-filter:none;backdrop-filter:none}
+#taskbar,#start,#ctx,.dlg,#tip{-webkit-backdrop-filter:blur(var(--blur));backdrop-filter:blur(var(--blur))}
+.win.hid{display:none!important} /* minimised windows stop rendering (games and canvases pause) */
+.lowend .win,.lowend .ico,.lowend .task{transition:none}.lowend .win{animation:none}
+.lowend #taskbar,.lowend #start,.lowend #ctx,.lowend .dlg,.lowend #tip{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgb(var(--gl)/.92)}
