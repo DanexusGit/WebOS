@@ -1,5 +1,0 @@
-/* INPUT: text fields must always be selectable and editable; only UI chrome is non-selectable. */
-input,textarea,select,[contenteditable]{-webkit-user-select:text!important;user-select:text!important;-webkit-touch-callout:default;touch-action:manipulation;pointer-events:auto}
-#taskbar,.tb,.ico,.task,.apps button,.item,.app,.dock,.tab,#hbar,#sbar,.lock,.ls{-webkit-user-select:none;user-select:none}
-/* Phones: shrink windows to the visible area when the on-screen keyboard opens, so the field stays in view. */
-html.mobile #windows{bottom:auto;height:var(--vvh,100%)}
