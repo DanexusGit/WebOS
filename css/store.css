@@ -1,0 +1,21 @@
+/* GAME STORE: layout estilo Steam com barra de vidro Aero. */
+.st{background:linear-gradient(180deg,#2a475e,#1b2838 240px,#16202d);color:#c7d5e0;--fg:#c7d5e0}
+.st-nav{display:flex;align-items:center;gap:4px;padding:6px 10px;flex:none;background:linear-gradient(180deg,#78b8f0,#2c6cb8 50%,#1d57a0 50%,#3d86d4);border-bottom:1px solid #0f3a73}
+html[data-theme] .st-nav button{background:none;border:0;box-shadow:none;color:#fff;font-weight:700;letter-spacing:.04em;text-shadow:0 1px 2px rgba(0,30,80,.8)}
+html[data-theme] .st-nav button.on{background:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.1));border-radius:4px}
+html[data-theme] .st input{background:#0f1923;color:#c7d5e0;border:1px solid #3d5a73;box-shadow:none}
+.st-src{font-size:11px;color:#dff0ff;margin-left:10px;opacity:.9}
+.st-az{display:flex;gap:2px;overflow:auto;padding:6px 10px;flex:none;background:rgba(0,0,0,.28)}
+html[data-theme] .st-az button{padding:2px 7px;font-size:11px;background:#2a475e;color:#c7d5e0;border:1px solid #3d5a73;border-radius:2px;box-shadow:none;text-shadow:none}
+html[data-theme] .st-az button.on{background:#66c0f4;color:#0f1923}
+.st-main{flex:1;overflow:auto;min-height:0}.st-info{padding:8px 14px 0;font-size:12px;opacity:.75}
+.st-feat{display:flex;gap:16px;margin:12px;padding:12px;background:linear-gradient(135deg,#2e5a7f,#1a3550);border:1px solid #3d6a8f;border-radius:4px}
+.st-ft{display:flex;flex-direction:column;gap:6px;justify-content:center;min-width:0}.st-ft h2{margin:0;font-size:24px;font-weight:300;color:#fff}.st-ft small{color:#66c0f4;letter-spacing:.1em}.st-ft p{margin:0;opacity:.8;font-size:13px}
+.st-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;padding:12px}
+.stc{background:#16202d;border:1px solid #2d4a63;border-radius:3px;overflow:hidden;cursor:pointer;transition:border-color .15s,box-shadow .15s}.stc:hover{border-color:#66c0f4;box-shadow:0 0 10px rgba(102,192,244,.45)}
+.stc-c{position:relative;height:84px;display:grid;place-items:center;font-size:34px;font-weight:700;color:rgba(255,255,255,.85);overflow:hidden}.stc-c.big{width:230px;height:120px;flex:none;border-radius:3px;border:1px solid #3d6a8f}
+.stc-c img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stc-n{padding:6px 8px 2px;font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff}.stc-b{display:flex;gap:4px;padding:4px 8px 8px}
+html[data-theme] .btn-g{background:linear-gradient(180deg,#9be07a,#5ca52c 50%,#4a8d22 50%,#79c34a);border:1px solid #3a6f1c;color:#fff;text-shadow:0 1px 1px #1d4a0c;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+html[data-theme] .btn-b{background:linear-gradient(180deg,#8fd0ff,#3b8bd9 50%,#2a6fb8 50%,#5cb0f0);border:1px solid #1d5a9c;color:#fff;text-shadow:0 1px 1px #0a2f5c;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+html[data-theme] .st .stc-b button{font-size:12px;padding:3px 8px}

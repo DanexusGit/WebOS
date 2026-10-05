@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="aero">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>WebOS</title>
+<!-- Mostra erros de script na tela (ajuda a depurar) -->
+<script>addEventListener("error",function(e){var d=document.getElementById("err");if(!d){d=document.createElement("pre");d.id="err";d.style.cssText="position:fixed;left:0;right:0;bottom:0;max-height:30%;overflow:auto;margin:0;padding:8px;background:#300;color:#fbb;font:12px monospace;z-index:99999;user-select:text";document.body.appendChild(d)}d.textContent+=e.message+" ("+String(e.filename||"").split("/").pop()+":"+e.lineno+")\n"})</script>
+<!-- CSS: base, interface de celular, otimizacoes -->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/mobile.css">
+<link rel="stylesheet" href="css/perf.css">
+<link rel="stylesheet" href="css/input.css">
+<link rel="stylesheet" href="css/aero.css">
+<link rel="stylesheet" href="css/store.css">
+</head>
+<body>
+<!-- 1. Boot e login (cada etapa e uma camada de tela cheia) -->
+<div id="boot"></div>
+<div id="login" hidden></div>
+
+<!-- 2. Area de trabalho (PC). No celular a interface iOS e criada por js/shell/mobile.js -->
+<div id="desktop" hidden>
+  <div id="widget" hidden></div>
+  <div id="icons"></div>
+  <div id="lasso"></div>
+  <div id="windows"><div id="snap"></div></div>
+  <div id="start" hidden></div>
+  <div id="tip" hidden></div>
+  <div id="taskbar">
+    <button id="startbtn" title="Start (Alt+Space)">⊞</button>
+    <div id="tasks"></div>
+    <div id="tray">
+      <span id="net"></span><span id="bat"></span>
+      <input id="vol" type="range" min="0" max="1" step=".05" value=".5" title="Volume">
+      <button id="lockbtn" title="Bloquear">🔒</button>
+      <span id="clock" title="Calendario"></span>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Menus de contexto e dialogos -->
+<div id="ctx" hidden></div>
+<div id="modal" hidden></div>
+
+<!-- JS (a ordem importa): nucleo -> apps -> interface -> otimizacoes.
+     Os jogos (games/*.js) so carregam quando voce abre o app. -->
+<script defer src="js/core/input.js"></script>
+<script defer src="js/core/kernel.js"></script>
+<script defer src="js/core/windows.js"></script>
+<script defer src="js/apps/system-apps.js"></script>
+<script defer src="js/apps/media-apps.js"></script>
+<script defer src="js/apps/browser-settings.js"></script>
+<script defer src="js/shell/desktop.js"></script>
+<script defer src="js/apps/extras.js"></script>
+<script defer src="js/apps/aero.js"></script>
+<script defer src="js/apps/store.js"></script>
+<script defer src="js/shell/mobile.js"></script>
+<script defer src="js/core/perf.js"></script>
+</body>
+</html>
